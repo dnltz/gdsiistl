@@ -34,9 +34,26 @@ gdsii_file_path = sys.argv[1]
 # choose which GDSII layers to use
 layerstack = {
     # layernumber: (zmin, zmax, 'layername'),
-    1: (0, 550, 'substrate'),
-    3: (552, 592, 'soi'),
-    6: (592, 593, 'metal'),
+    # Silicon
+    1:   ( 4,  6, 'Active'),
+    5:   ( 4,  5, 'GatPoly'),
+    6:   ( 4,  6, 'Cont'),
+    14:  ( 3,  4, 'pSD'),
+    31:  ( 2,  4, 'NWell'),
+    # Metal
+    8:   ( 6,  7, 'Metal1'),
+    19:  ( 7,  8, 'Via1'),
+    10:  ( 8,  9, 'Metal2'),
+    29:  ( 9, 10, 'Via2'),
+    30:  (10, 11, 'Metal3'),
+    49:  (11, 12, 'Via3'),
+    50:  (12, 13, 'Metal4'),
+    66:  (13, 14, 'Via4'),
+    67:  (14, 15, 'Metal5'),
+    125: (15, 16, 'TopVia1'),
+    126: (16, 17, 'TopMetal1'),
+    133: (17, 18, 'TopVia2'),
+    134: (18, 19, 'TopMetal2'),
 }
 
 ########## INPUT ##############################################################
